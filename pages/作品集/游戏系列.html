@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>作品集目录-游戏系列</title>
+    <style>
+        /* 主体和HTML的基本样式 */
+        body, html {
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+            background: black;
+        }
+
+        /* 背景Canvas的样式 */
+        #matrixCanvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        /* 主要容器样式 */
+        .matrix-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* 遮罩层样式，用于包裹卡片 */
+        .overlay {
+            position: absolute;
+            top: 5%;
+            left: 5%;
+            right: 5%;
+            bottom: 5%;
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.2);
+            z-index: 2;
+            padding: 20px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-around;
+        }
+
+        /* 遮罩层中的文字样式 */
+        .overlay-text {
+            color: #0F0;
+            font-size: 5em;
+            text-align: center;
+            font-family: "仓耳渔阳体", sans-serif;
+            margin-bottom: 0px;
+        }
+
+        /* 作品卡片样式 */
+        .project-card {
+            background: rgba(0, 255, 0, 0.1);
+            border: 1px solid #0F0;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            color: #0F0;
+            width: 99%;
+            margin: 5px;
+            box-sizing: border-box;
+            display: flex; /* 启用flex布局 */
+            align-items: center; /* 垂直居中对齐 */
+        }
+
+        /* 卡片内的内容区域 */
+        .project-card .card-content {
+            flex: 1; /* 占据可用空间 */
+        }
+
+        /* 卡片内的图片区域 */
+        .project-card .card-image {
+            flex: 0 0 150px; /* 设置固定宽度，根据需要调整 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* 图片样式 */
+        .project-card .card-image img {
+            width: 100%; /* 宽度填充容器 */
+            height: auto; /* 高度自适应 */
+            border-radius: 10px; /* 圆角边框 */
+        }
+
+        /* 卡片内链接样式 */
+        .project-card a {
+            display: block;
+            padding: 10px 15px;
+            margin-top: 10px;
+            background-color: #8fbc8f; /* 浅绿色背景 */
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            text-align: center;
+            font-family: "优设好身体", sans-serif;
+        }
+
+        /* 链接悬停效果 */
+        .project-card a:hover {
+            background-color: #006400; /* 深绿色背景 */
+        }
+
+        /* 卡片内标题样式 */
+        .project-card h3 {
+            font-size: 1.5em;
+            color: #0F0;
+            font-family: "优设好身体", sans-serif;
+        }
+
+        /* 卡片内段落样式 */
+        .project-card p {
+            font-family: "优设好身体", sans-serif;
+        }
+
+        /* 卡片内次级标题样式 */
+        .project-card h4 {
+            font-family: "优设好身体", sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="matrix-container">
+        <div class="overlay">
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <p class="overlay-text">我的作品集-游戏系列</p>
+            <!-- 作品卡片 -->
+            <div class="project-card">
+                <div class="card-content">
+                    <h3>贪吃蛇游戏</h3>
+                    <h4>状态:停止更新</h4>
+                    <p>这个项目由我和ChatGPT共同制作完成。是一个单人贪吃蛇游戏，添加了手机端按钮，电脑用方向键，手机用按钮</p>
+                    <a href="https://icesharon.tk/pages/4.html">进入！</a>
+                </div>
+                <div class="card-image">
+                    <img src="游戏系列-img/贪吃蛇游戏.png" alt="Project Image">
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="card-content">
+                    <h3>敲木鱼游戏</h3>
+                    <h4>状态:停止更新</h4>
+                    <p>这个项目由我和ChatGPT共同制作完成。点击中间的棕色圆形（木鱼）来赚取功德</p>
+                    <a href="https://icesharon.tk/pages/5.html">进入！</a>
+                </div>
+                <div class="card-image">
+                    <img src="游戏系列-img/敲木鱼游戏.png" alt="Project Image">
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="card-content">
+                    <h3>扫雷游戏</h3>
+                    <h4>状态:停止更新</h4>
+                    <p>这个项目由我和ChatGPT共同制作完成。详细游戏玩法说明见网页</p>
+                    <a href="https://icesharon.tk/pages/6.html">进入！</a>
+                </div>
+                <div class="card-image">
+                    <img src="游戏系列-img/扫雷游戏.png" alt="Project Image">
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="card-content">
+                    <h3>成语接龙游戏</h3>
+                    <h4>状态:停止更新</h4>
+                    <p>这个项目由我和ChatGPT共同制作完成。你需要接电脑的成语，要求接的首字与上一个成语的尾字一样</p>
+                    <a href="https://icesharon.tk/pages/7.html">进入！</a>
+                </div>
+                <div class="card-image">
+                    <img src="游戏系列-img/成语接龙游戏.png" alt="Project Image">
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="card-content">
+                    <h3>石头剪刀布游戏</h3>
+                    <h4>状态:停止更新</h4>
+                    <p>这个项目由我和ChatGPT共同制作完成。你需要选择一个按钮，并查看结果</p>
+                    <a href="https://icesharon.tk/pages/8.html">进入！</a>
+                </div>
+                <div class="card-image">
+                    <img src="游戏系列-img/石头剪刀布游戏.png" alt="Project Image">
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="card-content">
+                    <h3>Flappy bird游戏</h3>
+                    <h4>状态:将来预定更新（将box换成bird）</h4>
+                    <p>这个项目由我和ChatGPT共同制作完成。此外，目前的bird还是一个box（绝对不是因为我不想画了！）</p>
+                    <a href="https://icesharon.tk/pages/9.html">进入！</a>
+                </div>
+                <div class="card-image">
+                    <img src="游戏系列-img/Flappy Bird游戏.png" alt="Project Image">
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="card-content">
+                    <h3>井字棋游戏</h3>
+                    <h4>状态:将来预定更新（修复可以在非己方回合内点击bug）</h4>
+                    <p>这个项目由我和ChatGPT共同制作完成。详细游戏玩法说明见网页</p>
+                    <a href="https://icesharon.tk/pages/11.html">进入！</a>
+                </div>
+                <div class="card-image">
+                    <img src="游戏系列-img/井字棋游戏.png" alt="Project Image">
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="card-content">
+                    <h3>翻转记忆游戏</h3>
+                    <h4>状态:停止更新</h4>
+                    <p>这个项目由我和ChatGPT共同制作完成。你需要点击两个卡片，如果一样，那么消除，如果不一样，翻回来；目标：消除所有卡牌。</p>
+                    <a href="https://icesharon.tk/pages/12.html">进入！</a>
+                </div>
+                <div class="card-image">
+                    <img src="游戏系列-img/翻转记忆游戏.png" alt="Project Image">
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="card-content">
+                    <h3>大球吃小球游戏</h3>
+                    <h4>状态:停止更新</h4>
+                    <p>这个项目由我和ChatGPT共同制作完成。游戏规则见网页。</p>
+                    <a href="https://icesharon.tk/pages/14-引导页.html">进入！</a>
+                </div>
+                <div class="card-image">
+                    <img src="游戏系列-img/大球吃小球游戏.png" alt="Project Image">
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="card-content">
+                    <a href="目录.html">返回作品集目录</a>
+                </div>
+            </div>
+        </div>
+        <canvas id="matrixCanvas"></canvas>
+    </div>
+    <script>
+        const canvas = document.getElementById('matrixCanvas');
+        const context = canvas.getContext('2d');
+
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const katakana = '01';
+        const fontSize = 16;
+        const columns = canvas.width / fontSize;
+
+        const rainDrops = [];
+
+        for (let x = 0; x < columns; x++) {
+            rainDrops[x] = 1;
+        }
+
+        const draw = () => {
+            context.fillStyle = 'rgba(0, 0, 0, 0.05)';
+            context.fillRect(0, 0, canvas.width, canvas.height);
+
+            context.fillStyle = '#0F0'; 
+            context.font = fontSize + 'px monospace';
+
+            for (let i = 0; i < rainDrops.length; i++) {
+                const text = katakana.charAt(Math.floor(Math.random() * katakana.length));
+                context.fillText(text, i * fontSize, rainDrops[i] * fontSize);
+
+                if (rainDrops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                    rainDrops[i] = 0;
+                }
+                rainDrops[i]++;
+            }
+        };
+
+        setInterval(draw, 30);
+    </script>
+</body>
+</html>

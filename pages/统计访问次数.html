@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>统计访问次数</title>
+</head>
+<body>
+    <h1>欢迎访问我的网站</h1>
+    <p>本页面的访问次数：<span id="visitCount">0</span></p>
+
+    <script>
+        // 从本地存储中获取访问计数
+        let visitCount = localStorage.getItem('visitCount');
+
+        // 如果本地存储中没有计数数据，设置默认值为0
+        if (visitCount === null) {
+            visitCount = 0;
+        } else {
+            // 将计数值转换为整数
+            visitCount = parseInt(visitCount);
+        }
+
+        // 增加访问计数
+        visitCount++;
+
+        // 更新页面上的计数
+        document.getElementById('visitCount').textContent = visitCount;
+
+        // 将新的计数值保存到本地存储
+        localStorage.setItem('visitCount', visitCount.toString());
+    </script>
+</body>
+</html>

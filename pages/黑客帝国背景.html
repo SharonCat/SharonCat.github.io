@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>黑客帝国背景</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+            background: black;
+        }
+        .matrix-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        .overlay {
+            position: absolute;
+            top: 10%; 
+            left: 10%; 
+            right: 10%; 
+            bottom: 10%; 
+            border-radius: 15px; 
+            background: rgba(255, 255, 255, 0.2); 
+            z-index: 2; /* 确保在01字符串上方 */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .overlay-text {
+            color: #0F0; /* 选择鲜艳的绿色以增强可读性 */
+            font-size: 2em;
+            text-align: center;
+            font-family: "华文中宋", sans-serif;
+        }
+        #matrixCanvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1; /* 确保在背景下方 */
+        }
+    </style>
+</head>
+<body>
+    <div class="matrix-container">
+        <div class="overlay">
+            <!--<p class="overlay-text"></p>-->
+        </div>
+        <canvas id="matrixCanvas"></canvas>
+    </div>
+    <script>
+        const canvas = document.getElementById('matrixCanvas');
+        const context = canvas.getContext('2d');
+
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const katakana = '01';
+        const fontSize = 16;
+        const columns = canvas.width / fontSize;
+
+        const rainDrops = [];
+
+        for (let x = 0; x < columns; x++) {
+            rainDrops[x] = 1;
+        }
+
+        const draw = () => {
+            context.fillStyle = 'rgba(0, 0, 0, 0.05)';
+            context.fillRect(0, 0, canvas.width, canvas.height);
+
+            context.fillStyle = '#0F0'; 
+            context.font = fontSize + 'px monospace';
+
+            for (let i = 0; i < rainDrops.length; i++) {
+                const text = katakana.charAt(Math.floor(Math.random() * katakana.length));
+                context.fillText(text, i * fontSize, rainDrops[i] * fontSize);
+
+                if (rainDrops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                    rainDrops[i] = 0;
+                }
+                rainDrops[i]++;
+            }
+        };
+
+        setInterval(draw, 30);
+    </script>
+</body>
+</html>
